@@ -18,7 +18,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(lbr_fri_msgs
   msg/LBRCommand.msg
@@ -26,9 +25,7 @@ rosidl_generate_interfaces(lbr_fri_msgs
   msg/LBRState.msg
   msg/LBRTorqueCommand.msg
   msg/LBRWrenchCommand.msg
-  srv/AppConnect.srv
-  srv/AppDisconnect.srv
-  DEPENDENCIES builtin_interfaces std_msgs
+  DEPENDENCIES builtin_interfaces
   ADD_LINTER_TESTS
 )
 
