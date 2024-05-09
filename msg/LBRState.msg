@@ -16,7 +16,6 @@
 #  * time_stamp_nano_sec [ns]
 #
 #  * measured_joint_position [rad]
-#  * commanded_joint_position [rad]
 #  * measured_torque [Nm]
 #  * commanded_torque [Nm]
 #  * external_torque [Nm]
@@ -37,7 +36,6 @@ uint32 time_stamp_sec
 uint32 time_stamp_nano_sec
 
 float64[7] measured_joint_position
-float64[7] commanded_joint_position
 float64[7] measured_torque
 float64[7] commanded_torque
 float64[7] external_torque
