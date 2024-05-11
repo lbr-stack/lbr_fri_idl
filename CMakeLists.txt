@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(lbr_fri_msgs)
+project(lbr_fri_idl)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -19,7 +19,7 @@ find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
-rosidl_generate_interfaces(lbr_fri_msgs
+rosidl_generate_interfaces(lbr_fri_idl
   msg/LBRCommand.msg
   msg/LBRPositionCommand.msg
   msg/LBRState.msg

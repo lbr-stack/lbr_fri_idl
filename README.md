@@ -1,4 +1,4 @@
-# lbr_fri_msgs
+# lbr_fri_idl
 Interface definition language (IDL) messages for the FRI.
 
 ## Command Interfaces

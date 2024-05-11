@@ -2,26 +2,26 @@
 
 #include "friLBRState.h"
 
-#include "lbr_fri_msgs/msg/lbr_command.hpp"
-#include "lbr_fri_msgs/msg/lbr_position_command.hpp"
-#include "lbr_fri_msgs/msg/lbr_torque_command.hpp"
-#include "lbr_fri_msgs/msg/lbr_wrench_command.hpp"
+#include "lbr_fri_idl/msg/lbr_command.hpp"
+#include "lbr_fri_idl/msg/lbr_position_command.hpp"
+#include "lbr_fri_idl/msg/lbr_torque_command.hpp"
+#include "lbr_fri_idl/msg/lbr_wrench_command.hpp"
 
-TEST(lbr_fri_msgs, test_command_size) {
+TEST(lbr_fri_idl, test_command_size) {
   using namespace KUKA::FRI;
 
-  lbr_fri_msgs::msg::LBRCommand lbr_command;
+  lbr_fri_idl::msg::LBRCommand lbr_command;
   EXPECT_EQ(lbr_command.joint_position.size(), LBRState::NUMBER_OF_JOINTS);
   EXPECT_EQ(lbr_command.torque.size(), LBRState::NUMBER_OF_JOINTS);
 
-  lbr_fri_msgs::msg::LBRPositionCommand lbr_position_command;
+  lbr_fri_idl::msg::LBRPositionCommand lbr_position_command;
   EXPECT_EQ(lbr_position_command.joint_position.size(), LBRState::NUMBER_OF_JOINTS);
 
-  lbr_fri_msgs::msg::LBRTorqueCommand lbr_torque_command;
+  lbr_fri_idl::msg::LBRTorqueCommand lbr_torque_command;
   EXPECT_EQ(lbr_torque_command.torque.size(), LBRState::NUMBER_OF_JOINTS);
   EXPECT_EQ(lbr_torque_command.joint_position.size(), LBRState::NUMBER_OF_JOINTS);
 
-  lbr_fri_msgs::msg::LBRWrenchCommand lbr_wrench_command;
+  lbr_fri_idl::msg::LBRWrenchCommand lbr_wrench_command;
   EXPECT_EQ(lbr_wrench_command.joint_position.size(), LBRState::NUMBER_OF_JOINTS);
   EXPECT_EQ(lbr_wrench_command.wrench.size(), 6);
 }
