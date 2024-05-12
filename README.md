@@ -2,19 +2,28 @@
 Interface definition language (IDL) messages for the FRI.
 
 ## Command Interfaces
-- [LBRPositionCommand.msg](msg/LBRPositionCommand.msg):
+- `LBRPositionCommand.msg`:
+    - Control modes:
+        - `POSITION_CONTROL`
+        - `JOINT_IMPEDANCE_CONTROL`
+        - `CARTESIAN_IMPEDANCE_CONTROL`
     - Client command mode: `Position`
-    - Joint position
-- [LBRTorqueCommand.msg](msg/LBRTorqueCommand.msg): 
+    - Contains:
+        - Joint position
+- `LBRTorqueCommand.msg`:
+    - Control mode: `JOINT_IMPEDANCE_CONTROL`
     - Client command mode: `Torque`
-    - Joint position and torque overlay commands
-- [LBRWrenchCommand.msg](msg/LBRWrenchCommand.msg): 
-    - Client command mode `Wrench`
-    - Joint position and wrench overlay commands
+    - Contains:
+        - Joint position and torque overlay commands
+- `LBRWrenchCommand.msg`: 
+    - Control mode: `CARTESIAN_IMPEDANCE_CONTROL`
+    - Client command mode: `Wrench`
+    - Contains:
+        - Joint position and wrench overlay commands
 
-- [LBRCommand.msg](msg/LBRCommand.msg):
+- `LBRCommand.msg`:
     - Combined message to buffer the above
 
 ## State Interfaces
-- [LBRState.msg](msg/LBRState.msg):
+- `LBRState.msg`:
     - FRI exposed robot state
