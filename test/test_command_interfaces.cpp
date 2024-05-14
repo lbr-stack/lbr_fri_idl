@@ -3,7 +3,7 @@
 #include "friLBRState.h"
 
 #include "lbr_fri_idl/msg/lbr_command.hpp"
-#include "lbr_fri_idl/msg/lbr_position_command.hpp"
+#include "lbr_fri_idl/msg/lbr_joint_position_command.hpp"
 #include "lbr_fri_idl/msg/lbr_torque_command.hpp"
 #include "lbr_fri_idl/msg/lbr_wrench_command.hpp"
 
@@ -14,7 +14,7 @@ TEST(lbr_fri_idl, test_command_size) {
   EXPECT_EQ(lbr_command.joint_position.size(), LBRState::NUMBER_OF_JOINTS);
   EXPECT_EQ(lbr_command.torque.size(), LBRState::NUMBER_OF_JOINTS);
 
-  lbr_fri_idl::msg::LBRPositionCommand lbr_position_command;
+  lbr_fri_idl::msg::LBRJointPositionCommand lbr_position_command;
   EXPECT_EQ(lbr_position_command.joint_position.size(), LBRState::NUMBER_OF_JOINTS);
 
   lbr_fri_idl::msg::LBRTorqueCommand lbr_torque_command;
