@@ -18,6 +18,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
 
 rosidl_generate_interfaces(lbr_fri_idl
   msg/LBRCommand.msg
@@ -25,7 +27,9 @@ rosidl_generate_interfaces(lbr_fri_idl
   msg/LBRState.msg
   msg/LBRTorqueCommand.msg
   msg/LBRWrenchCommand.msg
+  srv/MoveToPose.srv
   DEPENDENCIES builtin_interfaces
+  DEPENDENCIES builtin_interfaces geometry_msgs
   ADD_LINTER_TESTS
 )
 
