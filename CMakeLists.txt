@@ -28,6 +28,7 @@ rosidl_generate_interfaces(lbr_fri_idl
   msg/LBRTorqueCommand.msg
   msg/LBRWrenchCommand.msg
   srv/MoveToPose.srv
+  srv/FreeFormMove.srv
   DEPENDENCIES builtin_interfaces
   DEPENDENCIES builtin_interfaces geometry_msgs
   ADD_LINTER_TESTS
